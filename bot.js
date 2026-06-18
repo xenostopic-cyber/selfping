@@ -8,7 +8,7 @@ const ws = new WebSocket('wss://gateway.discord.gg/?v=9&encoding=json');
 let heartbeatInterval = null;
 
 ws.on('open', () => {
-    console.log('Connecting to Discord...');
+    console.log('Connecting to dihcord make sure no potato wifi...');
 });
 
 ws.on('message', async (data) => {
