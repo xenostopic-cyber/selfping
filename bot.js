@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
 
 // dihcord user token and allowed ids go here
-const YOUR_TOKEN = "usertoken goes here yes keep quotes"; 
+const YOUR_TOKEN = "ur user fucking token and yess keep quotes"; 
 const ALLOWED_ID = "1514324250683641887";
 
 const ws = new WebSocket('wss://gateway.discord.gg/?v=9&encoding=json');
@@ -48,7 +48,7 @@ ws.on('message', async (data) => {
         console.log('Dihcord ping checker active');
     }
 
-    // Look for new messages also change §ping to anything u rlly want 
+    // Look for new messages
     if (op === 0 && t === 'MESSAGE_CREATE') {
         if (d.content === '§ping') {
             const channelId = d.channel_id;
@@ -62,9 +62,9 @@ ws.on('message', async (data) => {
             // Check if it is your ID
             if (authorId === ALLOWED_ID) {
                 const fakeEmbed = "```ansi\n" +
-                    "[2;35mDihcord connection[0m\n" +
-                    "[2;37mStatus:[0m Ok\n" +
-                    "[2;37mPing:[0m " + apiLatency + "ms\n" +
+                    "\u001b[2;35mDihcord connection\u001b[0m\n" +
+                    "\u001b[2;37mStatus:\u001b[0m Ok\n" +
+                    "\u001b[2;37mPing:\u001b[0m " + apiLatency + "ms\n" +
                     "```";
 
                 sendDiscordMessage(channelId, fakeEmbed);
