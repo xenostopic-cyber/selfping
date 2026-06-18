@@ -2,7 +2,7 @@ const WebSocket = require('ws');
 
 // dihcord user token and allowed ids go here
 const YOUR_TOKEN = "usertoken goes here yes keep quotes"; 
-const VIP_ID = "1514324250683641887";
+const ALLOWED_ID = "1514324250683641887";
 
 const ws = new WebSocket('wss://gateway.discord.gg/?v=9&encoding=json');
 let heartbeatInterval = null;
@@ -60,7 +60,7 @@ ws.on('message', async (data) => {
             const apiLatency = now - msgTime;
 
             // Check if it is your ID
-            if (authorId === VIP_ID) {
+            if (authorId === ALLOWED_ID) {
                 const fakeEmbed = "```ansi\n" +
                     "[2;35mDihcord connection[0m\n" +
                     "[2;37mStatus:[0m Ok\n" +
