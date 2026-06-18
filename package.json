@@ -1,0 +1,12 @@
+{
+  "name": "dihcord-ping",
+  "version": "1.0.0",
+  "description": "Simple dihcord ping checker lol",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
