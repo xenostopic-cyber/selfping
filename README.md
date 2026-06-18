@@ -38,13 +38,9 @@ Follow these steps sequentially to configure your local setup:
    ```bash
    cd /path/to/your/project-directory
    ```
-3. **Initialize Package:** Create a clean `package.json` manifest:
+3. **Install Dependencies:** Install the required WebSocket client middleware:
    ```bash
-   npm init -y
-   ```
-4. **Install Dependencies:** Install the required WebSocket client middleware:
-   ```bash
-   npm install ws
+   npm install
    ```
 
 ---
